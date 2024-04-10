@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PlayerControler : MonoBehaviour
 {
     private Rigidbody playerRb;
-    public float jumpForce;
+    public float jumpForce = 10;
     public float gravityModifier;
+    public bool isOnGround = true;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -15,13 +18,22 @@ public class PlayerControler : MonoBehaviour
     
       
     }
-    public bool isOnGround = true; 
+    
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Escape) && isOnGround)
+        
+        if (Input.GetKey(KeyCode.Space) && isOnGround)
         {
-            playerRb.AddForce(Vector3.up *jumpForce, ForceMode.Impulse);
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse); 
+            isOnGround = false ;
+            
+            
         } 
+
+    }
+    private void OnColllisionEnter(Collision collision)
+    {
+        isOnGround = true;
     }
 }
