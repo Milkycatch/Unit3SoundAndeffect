@@ -365,7 +365,7 @@ Transform:
   m_GameObject: {fileID: 534669902}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 4, z: -15}
+  m_LocalPosition: {x: 9.033, y: 4, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -628,7 +628,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: decb65715865e8f4ead11cfce418547e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 7812129071934722100, guid: 12c20ff35363e4742a8750a818486b1b, type: 3}
+  obstaclePrefabs:
+  - {fileID: 950237787285968834, guid: 6d02f29cbd0833449add82b3cbed150f, type: 3}
+  - {fileID: 4122223467952725861, guid: a5f3638d2628c764ababe54b5fddb555, type: 3}
+  - {fileID: 3129055808978573207, guid: ae531ed10c3de4a44a0ae572139f3786, type: 3}
 --- !u!4 &887145683
 Transform:
   m_ObjectHideFlags: 0
@@ -638,7 +641,7 @@ Transform:
   m_GameObject: {fileID: 887145681}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.05, y: 0.61, z: -1.52}
+  m_LocalPosition: {x: 21.88, y: 0.61, z: -1.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -689,6 +692,7 @@ MonoBehaviour:
   gameOver: 0
   explosionParticle: {fileID: 1090248851}
   dirtParticle: {fileID: 896692861}
+  isOnAir: 1
 --- !u!65 &1327753712
 BoxCollider:
   m_ObjectHideFlags: 0
