@@ -26,6 +26,8 @@ public class PlayerControler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+
         playerRb = GetComponent<Rigidbody>();
         playerAudio = GetComponent<AudioSource>(); 
         playerAnim = GetComponent<Animator>();
@@ -39,6 +41,8 @@ public class PlayerControler : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && (isOnGround || jump < jumpMax) && !gameOver)
         {
+
+
             jump++;
             Debug.Log("Jumps: " + jump);
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
