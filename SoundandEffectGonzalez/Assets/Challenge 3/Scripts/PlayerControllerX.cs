@@ -12,6 +12,9 @@ public class PlayerControllerX : MonoBehaviour
 
     public ParticleSystem explosionParticle;
     public ParticleSystem fireworksParticle;
+    public ParticleSystem moneyparticle;
+
+
 
     private AudioSource playerAudio;
     public AudioClip moneySound;
@@ -68,6 +71,7 @@ public class PlayerControllerX : MonoBehaviour
         else if (other.gameObject.CompareTag("Money"))
         {
             fireworksParticle.Play();
+            moneyparticle.Play();
             playerAudio.PlayOneShot(moneySound, 1.0f);
             Destroy(other.gameObject);
 
